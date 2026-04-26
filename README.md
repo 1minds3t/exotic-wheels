@@ -1,21 +1,16 @@
-# exotic-wheels
+# exotic-wheels (CF Pages host)
 
-Pre-built wheels for platforms PyPI forgot.
+This repo powers **[exotic-wheels.pages.dev](https://exotic-wheels.pages.dev/)** via Cloudflare Pages.
 
-```
-pip install cryptography --extra-index-url https://exotic-wheels.github.io/
-```
+It is infrastructure only. For everything else:
 
-→ **[exotic-wheels.github.io](https://exotic-wheels.github.io/)** — landing page + full package list
-
----
-
-**Why?** Packages like `cryptography` ship no wheels for `musllinux_1_2_armv7l`, `aarch64 musl`, and other exotic targets. Source builds require native toolchains, fail in CI, and break reproducible deploys. This index fills those gaps.
-
-**How?** Wheels are built once in podman containers against the correct sysroot, uploaded to GitHub Releases, and served as a [PEP 503](https://peps.python.org/pep-0503/) compliant index. Drop-in for pip — no custom tooling required.
-
-**Trust?** Every wheel links to its GH Release with SHA and upstream source version. No magic.
+| | |
+|---|---|
+| **Package index (pip)** | [exotic-wheels.github.io](https://exotic-wheels.github.io/) |
+| **Issues / wheel requests** | [exotic-wheels/exotic-wheels.github.io/issues](https://github.com/exotic-wheels/exotic-wheels.github.io/issues) |
+| **Releases / wheels** | [exotic-wheels/exotic-wheels.github.io/releases](https://github.com/exotic-wheels/exotic-wheels.github.io/releases) |
+| **Discussions** | [exotic-wheels/exotic-wheels.github.io/discussions](https://github.com/exotic-wheels/exotic-wheels.github.io/discussions) |
 
 ---
 
-Part of the [omnipkg](https://github.com/1minds3t) ecosystem. Need a wheel? [Open an issue](https://github.com/exotic-wheels/exotic-wheels.github.io/issues/new).
+`/simple/*` redirects to `exotic-wheels.github.io/simple/*` via `_redirects`.
