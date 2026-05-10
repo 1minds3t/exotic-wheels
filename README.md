@@ -6,7 +6,7 @@
 Pre-built wheels for platforms PyPI forgot.
 
 ```
-pip install cryptography -f https://exotic-wheels.github.io/
+pip install cryptography -f exotic-wheels.github.io
 ```
 
 → **[exotic-wheels.github.io](https://exotic-wheels.github.io/)** — landing page + full package list
